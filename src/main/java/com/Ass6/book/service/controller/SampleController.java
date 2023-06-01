@@ -24,7 +24,7 @@ public class SampleController {
 
     @PostMapping("/product")
     public ResponseEntity<ProductID> creatProduct(@RequestBody final Product product) {
-        System.out.println(product);
+        System.out.println("product: " + product);
         ProductID result = new ProductID(UUID.randomUUID().toString());
         return ResponseEntity.status(HttpStatus.CREATED)
                 .contentType(MediaType.APPLICATION_JSON)
