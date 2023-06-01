@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(com.Ass6.book.service.Application.class, args);
+        SpringApplication.run(BookInventory.Application.class, args);
     }
 
 }
