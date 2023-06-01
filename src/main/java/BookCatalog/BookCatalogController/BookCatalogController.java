@@ -14,6 +14,7 @@ import java.util.UUID;
 public class BookCatalogController {
     private Map<String, Book> bookCatalog;
 
+
     @PostMapping("/book")
     public ResponseEntity<BookID> createBook (@RequestBody final Book book) {
         System.out.println(book);
@@ -23,6 +24,7 @@ public class BookCatalogController {
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(result);
     }
+
 
     @GetMapping("/book/{id}")
     public Book getBookById (@PathVariable final String id) {

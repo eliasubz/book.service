@@ -15,13 +15,15 @@ import java.util.UUID;
 public class SampleController {
 
 
-    @PostMapping("/product")
-    public ResponseEntity<ProductID> creatProduct(@RequestBody final Product product) {
+    @PostMapping("/")
+    public String createProduct(@RequestBody final Product product) {
         System.out.println("product: " + product);
         ProductID result = new ProductID(UUID.randomUUID().toString());
-        return ResponseEntity.status(HttpStatus.CREATED)
+        return "Hello world";
+        /*ResponseEntity.status(HttpStatus.CREATED)
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(result);
+                */
     }
 
 }
