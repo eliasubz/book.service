@@ -1,0 +1,27 @@
+### get book by id
+GET http://localhost:8080/catalog/1
+
+### find all books
+GET  http://localhost:8080/catalog/fullCatalog
+
+### create new book
+POST http://localhost:8080/catalog
+Content-Type: application/json
+
+{
+  "id": 6,
+  "title": "A book",
+  "author": "Marco Tuanio",
+  "publicationYear": 2048
+  }
+
+### update a book
+PUT http://localhost:8080/catalog/1
+Content-Type: application/json
+
+{
+"id": 1,
+"title": "A book",
+"author": "Marco Tuanio",
+"publicationYear": 2048
+}
